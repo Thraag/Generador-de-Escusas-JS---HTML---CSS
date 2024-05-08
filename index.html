@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Nombres Aleatorios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #result {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Generador de Nombres Aleatorios</h1>
+    <button onclick="generarNombre()">Generar Nombre</button>
+    <div id="result"></div>
+
+    <script>
+        // Arrays con posibles nombres
+        var nombres = ["Juan", "María", "Pedro", "Ana", "Carlos", "Luis", "Laura", "Sofía", "David", "Elena"];
+
+        var queHizo = ["se comio", "se trago", "se meo", "rompio", "despedazo"];
+
+        var cosa = ["mi tarea", "mis documentos" , "mi pc" , "mi carnet"];
+
+        var momento = ["ayer", "hoy" , "en la mañana" , "en la noche"];
+
+
+        function generarNombre() {
+            // Seleccionar un nombre aleatorio
+            var nombreAleatorio = nombres[Math.floor(Math.random() * nombres.length)];
+
+
+            var queHizoAleatorio = queHizo[Math.floor(Math.random() * queHizo.length)];
+
+
+            var cosaAleatorio = cosa[Math.floor(Math.random() * cosa.length)];
+
+
+            var momentoAleatorio =  momento[Math.floor(Math.random() * momento.length)];
+
+
+            // Mostrar el resultado en la página
+            document.getElementById("result").innerHTML =  nombreAleatorio + " " + queHizoAleatorio +" "+ cosaAleatorio +" "+ momentoAleatorio;
+        }
+    </script>
+</body>
+</html>
